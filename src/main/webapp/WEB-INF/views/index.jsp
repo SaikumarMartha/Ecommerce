@@ -58,6 +58,6 @@ background-color:grey;
   <span class="glyphicon glyphicon-chervon-right"></span>
   <span class="sr-only">Next</span>
 </a>
-<h2>List of Cars</h2>
+<h2>list of products</h2>
 </div></div></body>
 </html>
