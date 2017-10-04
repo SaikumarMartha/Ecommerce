@@ -14,7 +14,7 @@
 <nav id="navbar-blue" class="navbar-inverse navbar-static-top" role="navigation" background-color="grey">
 <div class="container">
 		<ul class="nav navbar-nav">
-			<button type="button" class="nabar-toggle collapse" data-toggle="collapse" data-target="#bs-example-nav">
+			<button type="button"class="nabar-toggle collapse" data-toggle="collapse" data-target="#bs-example-nav">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
