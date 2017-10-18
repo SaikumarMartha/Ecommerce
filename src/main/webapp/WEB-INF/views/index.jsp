@@ -1,7 +1,8 @@
-
- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+
+    
+     <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,7 +12,7 @@
 background-color:grey;
 }
 </style>
-<title>CarsHub</title>
+<title>Cakes</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta charset="utf-8">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -22,6 +23,7 @@ background-color:grey;
 <title>Insert title here</title>
 </head>
 <jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="footer.jsp"></jsp:include>
 <%--<%@include=file="header.jsp"%> --%>
 <body>
 <div class="Container">
@@ -33,22 +35,30 @@ background-color:grey;
 <li data-target="#mycarousel" data-slide-to="1"></li>
 <li data-target="#mycarousel" data-slide-to="2"></li>
 <li data-target="#mycarousel" data-slide-to="3"></li>
+<li data-target="#mycarousel" data-slide-to="4"></li>
+<li data-target="#mycarousel" data-slide-to="5"></li>
+
 </ol>
 
 <!-- wrapper for slides -->
+<div class="col-lg-8 col-lg-offset-2">
 <div class="carousel-inner">
   <div class="item active">
-      <img class="img-rounded" class="img-responsive center-block" src="resources/car1.jpg"style=" width="100%" height="30%"">
+      <img class="img-rounded" class="img-responsive center-block" src="resources/1.jpg"style=" width:100%" >
   </div>
    <div class="item">
-   <img class="img-rounded" class="img-responsive center-block" src="resources/car2.jpg" style="width="100%" height="30%"">
+   <img class="img-rounded" class="img-responsive center-block" src="resources/1.1.jpg" style="width:100%">
    </div>
    <div class="item">
-   <img class="img-rounded" class="img-responsive center-block"src="resources/car3.jpg" style="width="100" height="30%"" >
+   <img class="img-rounded" class="img-responsive center-block"src="resources/1.2.jpg" style="width:100%"  >
    </div>
    <div class="item">
-   <img class="img-rounded" class="img-responsive center-block" src="resources/car4.jpg" style=" width="100%" height="30%"">
+   <img class="img-rounded" class="img-responsive center-block"src="resources/2.2.jpg" style="width:100%"  >
    </div>
+   <div class="item">
+   <img class="img-rounded" class="img-responsive center-block"src="resources/2.jpg" style="width:100%"  >
+   </div>
+   
 </div>
 <!-- Left and Right controls-->
 <a class="left carousel-control" href="#mycarousel"data-slide="prev">
@@ -58,7 +68,12 @@ background-color:grey;
 <a  class="right carousel-control" href="#mycarousel"data-slide="next">
   <span class="glyphicon glyphicon-chervon-right"></span>
   <span class="sr-only">Next</span>
-</a>
-<h2>list of products</h2>
-</div></div></body>
+</a></div>
+
+
+</div></div><br>
+
+</body>
+>
 </html>
+    

@@ -1,14 +1,20 @@
-package controller;
+package com.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.Dao.UserDao;
 import com.model.User;
+
+
+
+
+
+
+
+
 
 
 @Controller
@@ -23,7 +29,7 @@ public String index()
 {
 	return "index";
 }
-
+	
 
 @RequestMapping("/registration")
 public String goToRegisterPage(@ModelAttribute("user") User user,Model model)
@@ -32,9 +38,9 @@ public String goToRegisterPage(@ModelAttribute("user") User user,Model model)
 	model.addAttribute("user",new User());
 	
 	return "register";
+
+
 }
-
-
 
 @RequestMapping("/saveUser")
 public String createUser(@ModelAttribute("user") User user)
@@ -45,9 +51,6 @@ public String createUser(@ModelAttribute("user") User user)
 	userDao.saveUser(user);
 	return "index";
 }
-
-
-
 
 
 
