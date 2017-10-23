@@ -48,7 +48,7 @@ public class CategoryController
 	public String updateCategory(@PathVariable("catId") int catId,Model m)
 	{
 		Category category=categoryDao.getCategory(catId);
-		m.addAttribute(category);
+		m.addAttribute("Category",category);
 		
 		List<Category> listCategory=categoryDao.retrieveCategory();
 		m.addAttribute("categoryList",listCategory);

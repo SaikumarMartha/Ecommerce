@@ -45,7 +45,7 @@
 	<td>Operation</td>
 </tr>
 <c:forEach items="${supplierList}" var="supplier">
-	<tr bgcolor="cyan">
+	<tr bgcolor="orange">
 		<td>${supplier.supplierId}</td>
 		<td>${supplier.supplierName}</td>
 		<td>${supplier.supplierAddress}</td>

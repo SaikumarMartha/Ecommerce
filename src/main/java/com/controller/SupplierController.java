@@ -53,21 +53,9 @@ public class SupplierController
 		
 		List<Supplier> listSupplier=supplierDao.retrieveSupplier();
 		m.addAttribute("supplierList",listSupplier);
-		return "updateSupplier";
+		return "redirect:supplier";
 	}
 	
-	@RequestMapping(value="updateSupplier",method=RequestMethod.POST)
-	public String updateMySupplier(@ModelAttribute("supplier")Supplier supplier,Model m)
-	{
-		supplierDao.updateSupplier(supplier);
-		
-		
-		
-		List<Supplier> listSupplier=supplierDao.retrieveSupplier();
-		m.addAttribute("supplierList",listSupplier);
-		
-		return "redirect:/supplier";
-	}
 	
 	@RequestMapping(value="deleteSupplier/{supplierId}",method=RequestMethod.GET)
 	public String deleteSupplier(@PathVariable("supplierId")int supplierId,Model m)
@@ -76,8 +64,6 @@ public class SupplierController
 		supplierDao.deleteSupplier(supplier);
 		List<Supplier> listSupplier=supplierDao.retrieveSupplier();
 		m.addAttribute("supplierList",listSupplier);
-		
-		
 		return "Supplier";
 }
 }
