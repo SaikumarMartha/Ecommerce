@@ -78,7 +78,8 @@ public class ProductController
 	
 	@RequestMapping(value="InsertProduct",method = RequestMethod.POST)
 
-	public String addItem(@ModelAttribute("product") Product p,@RequestParam("file") MultipartFile file,HttpServletRequest request) throws IOException{
+	public String addItem(@ModelAttribute("product") Product p,@RequestParam("file") MultipartFile file,HttpServletRequest request) throws IOException
+	{
 		p.setImage(file.getBytes());
 		this.productDao.addProduct(p);
 		return "Product";
@@ -98,7 +99,7 @@ public class ProductController
 	public String showProductDesc(@PathVariable("productId")int productId,Model m)
 	{
 		Product product=productDao.getProduct(productId);
-		m.addAttribute("product",product);
+		m.addAttribute("Product",product);
 		return "ProductDesc";
 	}
 

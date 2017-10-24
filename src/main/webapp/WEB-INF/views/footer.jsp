@@ -20,13 +20,32 @@
 }
 </style>
   <footer>
-  <div class="navbar navbar-default navbar-fixed-bottom" id="footer">
-    <div class="container">
-      <p>© copy rights Company 2017
+  <div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-6 footer-navigation">
+			    <h3><a href="#"><span> </span></a></h3>
+			    <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Terms and Conditions</a><strong> · </strong><a href="#">Privacy Policy</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">FAQ</a><strong> · </strong><a href="#">ContactUs</a></p>
+			    <p class="company-name"></p>
+			</div>
+			<div class="col-md-4 col-sm-6 footer-contacts">
+			    <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+			        <p><span class="new-line-span"></span></p>
+			    </div>
+			    <div><i class="fa fa-phone footer-contacts-icon"></i>
+			        <p class="footer-center-info email text-left"> </p>
+			    </div>
+			    <div><i class="fa fa-envelope footer-contacts-icon"></i>
+			        <p> <a href="#" target="_blank"></a></p>
+			    </div>
+			</div>
+			<div class="clearfix visible-sm-block"></div>
+			<div class="col-md-4 footer-about">
+			    <h4>About the company</h4>
+      
           <div align="center" cellspacing="8">
        <a href="https://www.twitter.com" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-thumbs-up" style="color: black"></span>Twitter
-     
+     </a>
       <a href="https://www.facbook.com" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-thumbs-up" style="color: black"></span> Facebook
         </a>

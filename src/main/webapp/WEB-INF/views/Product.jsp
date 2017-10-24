@@ -9,7 +9,7 @@
 <title>product</title>
 </head>
 <body>
-		<form:form action="InsertProduct" modelAttribute="product" enctype="multipart/form-data">
+		<form:form action="InsertProduct" modelAttribute="product" enctype="multipart/form-data" method="post">
 
 <table align="center">
 	<tr>

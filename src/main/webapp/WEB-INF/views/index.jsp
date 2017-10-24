@@ -23,7 +23,7 @@ background-color:grey;
 <title>Insert title here</title>
 </head>
 <jsp:include page="header.jsp"></jsp:include>
-<jsp:include page="footer.jsp"></jsp:include>
+
 <%--<%@include=file="header.jsp"%> --%>
 <body>
 <div class="Container">
@@ -72,8 +72,8 @@ background-color:grey;
 
 
 </div></div><br>
-
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
->
+
 </html>
     

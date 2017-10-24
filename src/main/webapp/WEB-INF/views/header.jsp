@@ -29,7 +29,7 @@
     <ul class="nav navbar-nav">
 		<li><a href="home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
 		
-		<li><a href="register">Register</a></li>
+		<li><a href="registration">Register</a></li>
 		<li><a href="login"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li>
 		<li><a href="admin">Admin</a></li>
 		<li><a href="category">Category </a></li>
@@ -39,15 +39,6 @@
 		<li><a href="cart" ><i class="fa fa-shopping-bag" aria-hidden="true"></i>Cart</a></li></ul>
 	
 </div>
-
-
-
-
-
-
-
-
-
 
 </div>
 </nav>
