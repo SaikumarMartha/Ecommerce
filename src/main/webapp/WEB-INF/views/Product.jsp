@@ -9,12 +9,18 @@
 <title>product</title>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 		<form:form action="InsertProduct" modelAttribute="product" enctype="multipart/form-data" method="post">
 
 <table align="center">
 	<tr>
 		<td colspan="2">Product Detail</td>
 	</tr>	
+	<tr>
+		<td colspan="2">
+	<form:hidden path="productId"/>
+	</td>
+	</tr>
 	<tr>
 		<td>Product Name</td>
 		<td><form:input path="productName"/></td>
@@ -59,9 +65,43 @@
 			<center><input type="submit" value="Insert"/></center>
 		</td>
 	</tr>
+	</table>
+		</form:form>
+
+
+		<table cellspacing="2" align="center">
+				<tr bgcolor="gray">
+					<td>Product ID</td>
+					<td>Product Name</td>
+					<td>Product Description</td>
+					<td>Product Stock</td>
+					<td>Product Price</td>
+					<td>Category</td>
+					<td>Supplier</td>
+					<td>Product Image</td>
+					<td>Operation</td>
+				</tr>
 	
-</table>
-</form:form>
+	
+		<c:forEach items="${productList}" var="product">
+			<tr bgcolor="cyan">
+				<td>${product.productId}</td>
+				<td>${product.productName}</td>
+				<td>${product.productDesc}</td>
+				<td>${product.stock}</td>
+				<td>${product.price}</td>
+				<td>${product.catId}</td>
+				<td>${product.supplierId}</td>
+				<td>${product.image}</td>
+				<td>
+			
+						<a href="<c:url value="deleteProduct/${product.productId}"/>">DELETE</a>
+						<a href="<c:url value="updateProduct/${product.productId}"/>">UPDATE</a>
+				</td>
+			</tr>
+		</c:forEach></table>
+
+
 
 </body>
 </html>

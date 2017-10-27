@@ -7,6 +7,7 @@
 <title>Supplier-Frontend</title>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 <!-- <form action="AddSupplier" method="post">-->
 
 <form:form action="AddSupplier" modelAttribute="supplier">
@@ -15,9 +16,9 @@
 		<td colspan="2">Supplier Module</td>
 	</tr>
 	<tr>
-		<td>Supplier ID</td>
+		<td></td>
 		<!--<td><input type="text" name="supplierId"/></td>-->
-		<td><form:input path="supplierId"/></td>
+		<td><form:input path="supplierId" type="hidden"/></td>
 	</tr>
 	<tr>
 		<td>Supplier Name</td>

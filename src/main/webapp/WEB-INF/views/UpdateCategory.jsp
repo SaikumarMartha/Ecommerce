@@ -15,7 +15,11 @@
 		<td colspan="2">Category Module</td>
 
 	</tr>
-	
+	<tr>
+		<td>Category ID</td>
+		<!--<td><input type="text" name="catId"/></td>-->
+		<td><form:input path="catId"/></td>
+	</tr>
 	<tr>
 		<td>Category Name</td>
 		<!-- <td><input type="text" name="catName"/></td> -->

@@ -74,6 +74,5 @@ background-color:grey;
 </div></div><br>
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
-
 </html>
     

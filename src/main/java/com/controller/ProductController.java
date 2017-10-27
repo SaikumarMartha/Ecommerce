@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.Dao.CategoryDao;
 import com.Dao.ProductDao;
@@ -36,14 +37,16 @@ public class ProductController
 	SupplierDao supplierDao;
 	
 	@RequestMapping(value="product",method=RequestMethod.GET)
-	public String showProduct(Model m)
+	public String showProduct(@ModelAttribute("product")Product product,Model m)
 	{
-		Product product=new Product();
+		//Product product=new Product();
 		m.addAttribute(product);
 		
 		m.addAttribute("categoryList",this.getCategories());
 		m.addAttribute("supplierList", this.getSuppliers());
 		
+		List<Product> listProducts=productDao.retrieveProduct();
+		m.addAttribute("productList",listProducts);
 		return "Product";
 	}
 	
@@ -82,9 +85,37 @@ public class ProductController
 	{
 		p.setImage(file.getBytes());
 		this.productDao.addProduct(p);
-		return "Product";
+		return "redirect:/product";
 		
 	}
+	
+	
+	@RequestMapping(value="updateProduct/{productId}",method=RequestMethod.GET)
+    public String updateProduct(@PathVariable("productId") int productId,Model m,RedirectAttributes attributes)
+    {
+       
+       attributes.addFlashAttribute("product", this.productDao.getProduct(productId));
+    	return "redirect:/product";
+    }
+  
+	@RequestMapping(value="deleteProduct/{productId}",method=RequestMethod.GET)
+    public String deleteProduct(@PathVariable("productId")int productId,Model m,RedirectAttributes attributes)
+    {
+    	m.addAttribute("product", productDao.deleteProduct(productId));
+    	
+    	return "redirect:/product";
+    }
+
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@RequestMapping(value="userHome")
 	public String showProducts(Model m)

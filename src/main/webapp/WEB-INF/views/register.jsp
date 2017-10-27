@@ -15,7 +15,7 @@
 <html>
     <head>
     </head>
-    <body>
+    <body><centre>
         <h3>Welcome, Enter The User Details</h3>
         <form:form method="POST" action="saveUser" modelAttribute="user">
              <table>
@@ -53,5 +53,6 @@
                 </tr>
             </table>
         </form:form>
+    </centre>
     </body>
 </html></html>

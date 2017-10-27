@@ -7,7 +7,8 @@
 <head>
 <title>Category-Frontend</title>
 </head>
-<body>
+<body background="${pageContext.request.contextPath}">
+<jsp:include page="header.jsp"></jsp:include>
 <!-- <form action="AddCategory" method="post">-->
 
 <form:form action="AddCategory" modelAttribute="category">
@@ -16,10 +17,13 @@
 		<td colspan="2">Category Module</td>
 	</tr>
 	<tr>
-		<td>Category ID</td>
-		<!--<td><input type="text" name="catId"/></td>-->
-		<td><form:input path="catId"/></td>
+		
+		
+		<form:input type="hidden" name="catId" path="catId" class="form-control" />
+		
+		
 	</tr>
+	
 	<tr>
 		<td>Category Name</td>
 		<!-- <td><input type="text" name="catName"/></td> -->
@@ -32,7 +36,9 @@
 	</tr>
 	<tr>
 		<td colspan="2">
-			<center><input type="submit" value="Insert"/></center>
+			<center><input type="submit" value="Insert"/>
+			
+			</center>
 		</td>
 	</tr>
 </table>
@@ -58,6 +64,6 @@
 </c:forEach>
 
 </table>
-
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
