@@ -10,14 +10,15 @@
 			<title>Registration Page</title>
 	</head>
 	<body>
-			<jsp:include page="header.jsp"></jsp:include>
+			<jsp:include page="welcome.jsp"></jsp:include>
 		<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
     <head>
     </head>
-    <body><centre>
+    <body>
+    <div align="center">
         <h3>Welcome, Enter The User Details</h3>
-        <form:form method="POST" action="saveUser" modelAttribute="user">
+        <form:form method="POST" action="saveUser" modelAttribute="user" >
              <table>
                 <tr>
                     <td><form:label path="username">UserName</form:label></td>
@@ -49,10 +50,10 @@
                 
                 
                 <tr>
-                    <td><input type="submit" value="Submit"/></td>
+                    <td><input align="center" type="submit" value="Submit"/></td>
                 </tr>
             </table>
         </form:form>
-    </centre>
+    </div>
     </body>
 </html></html>

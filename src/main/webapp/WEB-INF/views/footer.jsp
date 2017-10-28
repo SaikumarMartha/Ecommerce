@@ -24,20 +24,10 @@
 		<div class="row">
 			<div class="col-md-4 col-sm-6 footer-navigation">
 			    <h3><a href="#"><span> </span></a></h3>
-			    <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Terms and Conditions</a><strong> · </strong><a href="#">Privacy Policy</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">FAQ</a><strong> · </strong><a href="#">ContactUs</a></p>
+			    <p><a href="#">Home</a><strong> · </strong><a href="#">Terms and Conditions</a><strong> · </strong><a href="#">Privacy Policy</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">FAQ</a><strong> · </strong><a href="#">ContactUs</a></p>
 			    <p class="company-name"></p>
 			</div>
-			<div class="col-md-4 col-sm-6 footer-contacts">
-			    <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
-			        <p><span class="new-line-span"></span></p>
-			    </div>
-			    <div><i class="fa fa-phone footer-contacts-icon"></i>
-			        <p class="footer-center-info email text-left"> </p>
-			    </div>
-			    <div><i class="fa fa-envelope footer-contacts-icon"></i>
-			        <p> <a href="#" target="_blank"></a></p>
-			    </div>
-			</div>
+			
 			<div class="clearfix visible-sm-block"></div>
 			<div class="col-md-4 footer-about">
 			    <h4>About the company</h4>

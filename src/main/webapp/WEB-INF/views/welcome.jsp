@@ -29,7 +29,7 @@
 		</ul>
 </div>
 <div class="collapse navbar-collapse" id="bs-example-nav">
-   <a class="navbar-brand" href="#">BAKINS</a>
+   <a class="navbar-brand" href="#">BAkery</a>
 			
 				<ul class="nav navbar-nav navbar-right">
 					
@@ -39,7 +39,7 @@
                      </sec:authorize>
                     <sec:authorize access="isAuthenticated()">
                  <li><a href="<c:url value="j_spring_security_logout"/>">Logout</a></li>
-                 <li role="presentation"><a href="cart">cart</a></li>
+                 <li role="presentation"><a href="cart">Cart</a></li>
                   </sec:authorize>
 	
 				</ul>
@@ -49,5 +49,65 @@
 
 </div>
 </nav>
+
+<c:forEach items="${pList}" var="product">
+   
+    <div class="container">
+        <div class="row product">
+            <div class="col-md-5 col-md-offset-0">
+            <img src="/LEONINES/myImage/imageDisplay?id=${product.productId}" alt="" width="200" height="100" /></div>
+            <div class="col-md-7">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Specifications </th>
+                                <th>Details </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> Name</td>
+                                <td>${product.productName}</td>
+                            </tr>
+                            <tr>
+                                <td>Price </td>
+                                <td>${product.price} </td>
+                            </tr>
+                            <tr>
+                                <td>Description</td>
+                                <td>${product.productDesc} </td>
+                            </tr>
+                            <tr>
+                                <td>colours </td>
+                                <td>Orange,Black,White </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <form:form action="addToCart/${product.productId}" method="POST">
+                <button class="btn btn-default" type="submit">Add to cart</button>
+                </form:form>
+            </div>
+        </div>
+        
+        <div class="media">
+            <div class="media-body"></div>
+        </div>
+        <div class="media">
+            <div class="media-body"></div>
+        </div>
+    </div>
+    </c:forEach>  
+	  
+
+
+
+
+
+
+
+
+
 </body>
 </html>

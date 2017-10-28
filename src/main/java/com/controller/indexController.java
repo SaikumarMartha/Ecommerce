@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.Dao.ProductDao;
 import com.Dao.UserDao;
 import com.model.User;
 
@@ -24,10 +25,13 @@ public class indexController
 	
 	@Autowired
 	private UserDao userDao;
+	@Autowired
+	private ProductDao productDao;
 	
 @RequestMapping("/")
-public String index()
+public String showIndex(Model model)
 {
+	model.addAttribute("pList",productDao.retrieveProduct());
 	return "welcome";
 }
 	

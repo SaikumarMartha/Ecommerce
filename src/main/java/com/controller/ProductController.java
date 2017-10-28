@@ -113,26 +113,6 @@ public class ProductController
 	
 	
 	
-	
-	
-	
-	
-	@RequestMapping(value="userHome")
-	public String showProducts(Model m)
-	{
-		List<Product> listProducts=productDao.retrieveProduct();
-		m.addAttribute("productList",listProducts);
-		
-		return "UserHome";
-	}
-	
-	@RequestMapping(value="productDesc/{productId}")
-	public String showProductDesc(@PathVariable("productId")int productId,Model m)
-	{
-		Product product=productDao.getProduct(productId);
-		m.addAttribute("Product",product);
-		return "ProductDesc";
-	}
 
 }
 

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.Dao.ProductDao;
 import com.model.Product;
 @Controller
+@RequestMapping("/myImage")
 public class ImageController 
 {
 	@Autowired

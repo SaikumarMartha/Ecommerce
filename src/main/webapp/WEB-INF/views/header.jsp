@@ -27,20 +27,25 @@
 		</ul>
 </div>
 <div class="collapse navbar-collapse" id="bs-example-nav">
-    <ul class="nav navbar-nav">
-		<li><a href="home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+   <ul class="nav navbar-nav ">
+		<li><a href="home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li></ul>
 		
-		
+		<ul class="nav navbar-nav navbar-right">
 		
 		<li><a href="category">Category </a></li>
 		<li><a href="supplier">Supplier </a></li>
 		<li><a href="product">Product </a></li>
+		 
+		 
+		  <sec:authorize access="isAuthenticated()">
+                <li><a href="<c:url value="j_spring_security_logout"/>">Logout</a></li>
+           </sec:authorize>
+           </ul>
 		
-		</li></ul>
 	
 </div>
 
-</div>
+
 </nav>
 </body>
 </html>
