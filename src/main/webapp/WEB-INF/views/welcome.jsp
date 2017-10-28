@@ -34,12 +34,12 @@
 				<ul class="nav navbar-nav navbar-right">
 					
 					  <sec:authorize access="!isAuthenticated()">
-                    <li role="presentation"><a href="login">Login </a></li>
+                    <li role="presentation"><a href="login"><i class="fa fa-sign-in" aria-hidden="true"></i>Login </a></li>
                     <li role="presentation"><a href="registration">Register </a></li>
                      </sec:authorize>
                     <sec:authorize access="isAuthenticated()">
-                 <li><a href="<c:url value="j_spring_security_logout"/>">Logout</a></li>
-                 <li role="presentation"><a href="cart">Cart</a></li>
+                 <li> <a href="<c:url value="j_spring_security_logout" />"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
+                 <li role="presentation"><a href="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart</a></li>
                   </sec:authorize>
 	
 				</ul>
@@ -55,7 +55,7 @@
     <div class="container">
         <div class="row product">
             <div class="col-md-5 col-md-offset-0">
-            <img src="/LEONINES/myImage/imageDisplay?id=${product.productId}" alt="" width="200" height="100" /></div>
+            <img src="/LEONINES/myImage/imageDisplay?id=${product.productId}" alt="" width="30%" height="20%" /></div>
             <div class="col-md-7">
                 <div class="table-responsive">
                     <table class="table">

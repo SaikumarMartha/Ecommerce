@@ -12,8 +12,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.Dao.CartDao;
 import com.Dao.ProductDao;
+import com.Dao.UserDao;
 import com.model.Cart;
 import com.model.Product;
+import com.model.User;
 
 @Controller
 public class CartController
@@ -24,6 +26,10 @@ public class CartController
 	
 	@Autowired
 	ProductDao productDao;
+	@Autowired
+	UserDao userDao;
+	int userId;
+	User user;
 	
 
 	  @RequestMapping(value="addToCart/{id}")
