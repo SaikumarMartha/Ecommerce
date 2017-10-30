@@ -99,15 +99,16 @@ body
                             </div>
                         </div></td>
                         <td class="col-sm-1 col-md-1" style="text-align: center">
-                        
+                        <form action="editCart/${cart.cartId}">
                         <input type="text" class="form-control" id="exampleInputEmail1" name="quantity" value="${cart.productQuantity }" >
                         
+                        </form>
                         
                         </td>
                         <td class="col-sm-1 col-md-1 text-center"><strong>${cart.productPrice}</strong></td>
                         <td class="col-sm-1 col-md-1 text-center"><strong>${cart.subTotal}</strong></td>
                         <td class="col-sm-1 col-md-1">
-                       <a href="removeCart/{cartId}" class="btn btn-default">
+                       <a href="removeCart/${cart.cartId}" class="btn btn-success">
                           <span class="glyphicon glyphicon-trash"></span> Delete
                         </a>
                         
@@ -136,13 +137,13 @@ body
                         <td>   </td>
                         <td>   </td>
                         <td>
-                        <a href="continue_shopping" class="btn btn-default">
+                        <a href="continue_shopping" class="btn btn-info">
                             <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
                        </a>
                         
                         </td>
                          <td>
-                        <a href="Checkout" class="btn btn-default">
+                        <a href="Checkout" class="btn btn-warning">
                             <span class="glyphicon glyphicon-play"></span> Checkout
                        </a>
                         
