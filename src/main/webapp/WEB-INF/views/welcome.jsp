@@ -29,7 +29,7 @@
 		</ul>
 </div>
 <div class="collapse navbar-collapse" id="bs-example-nav">
-   <a class="navbar-brand" href="#">BAkery</a>
+   <a class="navbar-brand" href="#">SmartHub</a>
 			
 				<ul class="nav navbar-nav navbar-right">
 					
@@ -55,7 +55,7 @@
     <div class="container">
         <div class="row product">
             <div class="col-md-5 col-md-offset-0">
-            <img src="/LEONINES/myImage/imageDisplay?id=${product.productId}" alt="" width="30%" height="20%" /></div>
+            <img src="/LEONINES/myImage/imageDisplay?id=${product.productId}" alt="" width="300" height="200" /></div>
             <div class="col-md-7">
                 <div class="table-responsive">
                     <table class="table">
@@ -80,7 +80,7 @@
                             </tr>
                             <tr>
                                 <td>colours </td>
-                                <td>Orange,Black,White </td>
+                                <td>Black,White </td>
                             </tr>
                         </tbody>
                     </table>

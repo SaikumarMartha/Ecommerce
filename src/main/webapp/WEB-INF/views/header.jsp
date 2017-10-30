@@ -12,36 +12,100 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Admin</title>
+<style>
+body {
+background: #5A9BB5;
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 </head>
 <body>
 
-<nav id="navbar-blue" class="navbar-inverse navbar-static-top" role="navigation" background-color="grey">
+<nav id="navbar-blue" class="navbar-inverse navbar-static-top" role="navigation" background-color="blue">
 <div class="container">
 		<ul class="nav navbar-nav">
 			<button type="button"class="nabar-toggle collapse" data-toggle="collapse" data-target="#bs-example-nav">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
+		
+			
 			</button>
 		</ul>
 </div>
 <div class="collapse navbar-collapse" id="bs-example-nav">
-   <ul class="nav navbar-nav ">
-		<li><a href="home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li></ul>
+   
+		<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+  <a href="category">Category</a>
+  <a href="supplier">Supplier</a>
+  <a href="product">Product</a>
+  
+</div>
+
+
+<span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; ADMIN</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+
+
+
 		
 		<ul class="nav navbar-nav navbar-right">
 		
-		<li><a href="category">Category </a></li>
-		<li><a href="supplier">Supplier </a></li>
-		<li><a href="product">Product </a></li>
-		 
-		 
+		<li><a href="home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
 		  <sec:authorize access="isAuthenticated()">
-                <li><a href="<c:url value="j_spring_security_logout" />"><i class="fa fa-sign-out" aria-hidden="true"/>Logout</a></li>
+                <li><a href="<c:url value="j_spring_security_logout"/>"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
            </sec:authorize>
            </ul>
 		

@@ -12,7 +12,7 @@
 background-color:grey;
 }
 </style>
-<title>Cakes</title>
+<title>SmartHuB</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta charset="utf-8">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -36,7 +36,7 @@ background-color:grey;
 <li data-target="#mycarousel" data-slide-to="2"></li>
 <li data-target="#mycarousel" data-slide-to="3"></li>
 <li data-target="#mycarousel" data-slide-to="4"></li>
-<li data-target="#mycarousel" data-slide-to="5"></li>
+
 
 </ol>
 
@@ -44,20 +44,18 @@ background-color:grey;
 <div class="col-lg-8 col-lg-offset-2">
 <div class="carousel-inner">
   <div class="item active">
-      <img class="img-rounded" class="img-responsive center-block" src="resources/1.jpg"style=" width:100%" >
+      <img class="img-rounded" class="img-responsive center-block" src="resources/bretling.jpg"style=" width:100%" >
   </div>
    <div class="item">
-   <img class="img-rounded" class="img-responsive center-block" src="resources/1.1.jpg" style="width:100%">
+   <img class="img-rounded" class="img-responsive center-block" src="resources/mac.jpg" style="width:100%">
    </div>
    <div class="item">
-   <img class="img-rounded" class="img-responsive center-block"src="resources/1.2.jpg" style="width:100%"  >
+   <img class="img-rounded" class="img-responsive center-block"src="resources/iphone.jpg" style="width:100%"  >
    </div>
    <div class="item">
-   <img class="img-rounded" class="img-responsive center-block"src="resources/2.2.jpg" style="width:100%"  >
+   <img class="img-rounded" class="img-responsive center-block"src="resources/police.jpg" style="width:100%"  >
    </div>
-   <div class="item">
-   <img class="img-rounded" class="img-responsive center-block"src="resources/2.jpg" style="width:100%"  >
-   </div>
+   
    
 </div>
 <!-- Left and Right controls-->

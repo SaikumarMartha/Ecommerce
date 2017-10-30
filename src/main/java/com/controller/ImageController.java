@@ -21,7 +21,7 @@ public class ImageController
 	@Autowired
 	ProductDao productDao;
 	
-	@RequestMapping(value = "myImage/imageDisplay", method = RequestMethod.GET)
+	@RequestMapping(value = "/imageDisplay", method = RequestMethod.GET)
 	  public void showImage(@RequestParam("id") int id, HttpServletResponse response,HttpServletRequest request) 
 			  throws ServletException, IOException{
 		

@@ -86,6 +86,37 @@ public class CartController
 		}
 
 
+	  @RequestMapping("editCart/{cartId}")
+		public String editorder(@PathVariable("cartId") int cartid, @RequestParam("quantity") int q, HttpSession session) {
+		
+			//int userId = (Integer) session.getAttribute("userid");
+			Cart cart = cartDao.editCartById(cartid);
+			Product p = productDao.getProduct(cart.getProductid());
+			cart.setProductQuantity(q);
+			//cart.setProductPrice(q * p.getPrice());
+			cart.setSubTotal(q * p.getPrice());
+			cartDao.saveProductToCart(cart);
+			session.setAttribute("cartsize", cartDao.cartsize((Integer) session.getAttribute("userid")));
+			return "redirect:/cart";
+		}
+	    /*
+	    
+	    
+	    
+	@RequestMapping(value="removeCart/{id}")
+	public String deleteorder(@PathVariable("id") int id, HttpSession session) {
+		cartDao.removeCartById(id);
+		session.setAttribute("cartsize", cartDao.cartsize((Integer) session.getAttribute("userid")));
+		return "redirect:/cart";
+	}
+*/
+
+	@RequestMapping("continue_shopping")
+	public String continueshopping()
+	{
+	return "redirect:/";	
+
+	}
 
 	
 	  

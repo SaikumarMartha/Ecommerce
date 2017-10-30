@@ -6,6 +6,9 @@
 <html>
 <head>
 <style type="text/css">
+body{
+background:#233e44;
+}
 .img-rounded
 {
     border-radius: 8500px;
@@ -16,7 +19,7 @@
 }
 
 </style>
-<title>Cakes</title>
+<title>CartPage</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta charset="utf-8">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -25,8 +28,39 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
+<body>
+<div class="bs-example">
+    <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">SmartHuB</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="loggedin"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+                   
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    
+                              <li role="presentation"><a href="registration">Register </a></li>
+                           
+                            
+                        </ul>
+                  
+               
+            </div>
+        </div>
+    </nav>
+</div>
 <form  method="post" action="j_spring_security_check" class="form-horizontal" align="center">
-
 	<div class="container">
     <div class="row vertical-offset-100"><br>
     <br>
@@ -77,4 +111,4 @@
 		</div>
 	</div>
 </div>
-</form></head></html>
+</form></body></head></html>

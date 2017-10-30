@@ -22,7 +22,7 @@
 <style type="text/css">
 body 
  {
-    background-image:;
+    background:#233e44;
 
 }
 </style>
@@ -43,7 +43,7 @@ body
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">BAkery</a>
+                <a class="navbar-brand" href="#">SmartHuB</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -60,7 +60,7 @@ body
                         </ul>
                   
                
-            </div><!-- /.navbar-collapse -->
+            </div>
         </div>
     </nav>
 </div>
@@ -107,8 +107,8 @@ body
                         <td class="col-sm-1 col-md-1 text-center"><strong>${cart.productPrice}</strong></td>
                         <td class="col-sm-1 col-md-1 text-center"><strong>${cart.subTotal}</strong></td>
                         <td class="col-sm-1 col-md-1">
-                       
-                          <span class="glyphicon glyphicon-remove"></span> Delete
+                       <a href="removeCart/{cartId}" class="btn btn-default">
+                          <span class="glyphicon glyphicon-trash"></span> Delete
                         </a>
                         
                         </td>
