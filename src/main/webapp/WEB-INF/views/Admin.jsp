@@ -7,10 +7,7 @@
 <html>
 <head>
 <style type="text/css">
-.img-rounded
-{
-background-color:grey;
-}
+
 </style>
 <title>SmartHuB</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -69,8 +66,12 @@ background-color:grey;
 </a></div>
 
 
-</div></div><br>
-<jsp:include page="footer.jsp"></jsp:include>
+</div></div>
+</br>
+</br>
+</br>
+</br>
+
 </body>
 </html>
     

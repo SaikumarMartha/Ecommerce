@@ -19,13 +19,7 @@
 <script src="resources/lib/jquery/jquery-1.10.2.js"></script>
 <script src="resources/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
 
-<style type="text/css">
-body 
- {
-    background:#233e44;
 
-}
-</style>
 <%-- <jsp:include page="showProduct.jsp" /> --%> 
 
 </head>
@@ -48,7 +42,7 @@ body
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="loggedin"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+                    <li><a href="http://localhost:8080/LEONINES/"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
                    
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -91,7 +85,7 @@ body
                      
                         <td class="col-sm-8 col-md-6">
                         <div class="thumbnail">
-                         <a class="thumbnail pull-left" href="#"> <img src="/LEONINES/myImage/imageDisplay?id=${cart.productid}" style="height:50px;height: 50px" > </a>
+                         <a class="thumbnail pull-left" href="#"> <img src="/LEONINES/myImage/imageDisplay?id=${cart.productid}" class="img-rounded" style="height:50px;height: 50px" > </a>
                             <div class="media-body">
                                 <h4 class="media-heading"><a href="#">${cart.productName}</a></h4>
                             <!--     <h5 class="media-heading"> by <a href="#">Brand name</a></h5>--> 
@@ -117,13 +111,7 @@ body
                           
                     </c:forEach>   
                           
-                    <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td><h5>Subtotal</h5></td>
-                        <td class="text-right"><h5><strong>${cart.subTotal}</strong></h5></td>
-                    </tr>
+                    
                    
                     <tr>
                         <td>   </td>
@@ -156,8 +144,8 @@ body
         </div>
     </div>
 </div>
-<jsp:include page="footer.jsp" />
+
 
 </body>
-
+<jsp:include page="footer.jsp" />
 </html>

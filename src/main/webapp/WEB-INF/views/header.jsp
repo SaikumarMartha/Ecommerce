@@ -14,7 +14,7 @@
 <title>Admin</title>
 <style>
 body {
-background: #5A9BB5;
+
     font-family: "Lato", sans-serif;
 }
 
@@ -60,7 +60,7 @@ background: #5A9BB5;
 </head>
 <body>
 
-<nav id="navbar-blue" class="navbar-inverse navbar-static-top" role="navigation" background-color="blue">
+<!-- <nav id="navbar-blue" class="navbar-inverse navbar-static-top" role="navigation" background-color="blue">
 <div class="container">
 		<ul class="nav navbar-nav">
 			<button type="button"class="nabar-toggle collapse" data-toggle="collapse" data-target="#bs-example-nav">
@@ -73,14 +73,17 @@ background: #5A9BB5;
 		</ul>
 </div>
 <div class="collapse navbar-collapse" id="bs-example-nav">
-   
+    -->
 		<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  
+  <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
   <a href="category">Category</a>
   <a href="supplier">Supplier</a>
   <a href="product">Product</a>
-  
+   <sec:authorize access="isAuthenticated()">
+                <li><a href="<c:url value="j_spring_security_logout"/>"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
+           </sec:authorize>
+           
 </div>
 
 
@@ -101,13 +104,7 @@ function closeNav() {
 
 
 		
-		<ul class="nav navbar-nav navbar-right">
 		
-		<li><a href="home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
-		  <sec:authorize access="isAuthenticated()">
-                <li><a href="<c:url value="j_spring_security_logout"/>"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
-           </sec:authorize>
-           </ul>
 		
 	
 </div>
