@@ -198,7 +198,7 @@ input::placeholder{
   			<!-- Login Form -->
   			<div class="loginForm">
   				<div class="title">
-  					<p>LOG INTO<br><span>SYSTEM</span></p>
+  					<p>LOG INTO<br><span>WEBSITE</span></p>
   					<hr>
   					<hr class="short">
   				</div>

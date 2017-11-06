@@ -131,7 +131,7 @@
                         
                         </td>
                          <td>
-                        <a href="Checkout" class="btn btn-warning">
+                        <a href="checkout" class="btn btn-warning">
                             <span class="glyphicon glyphicon-play"></span> Checkout
                        </a>
                         

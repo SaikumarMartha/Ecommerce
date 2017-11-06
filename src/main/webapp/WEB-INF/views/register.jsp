@@ -197,22 +197,31 @@ input::placeholder{
   			<!-- Login Form -->
   			<div class="loginForm">
   				<div class="title">
-  					<p>REGISTER INTO<br><span>SYSTEM</span></p>
+  					<p>REGISTER INTO<br><span>WEBSITE</span></p>
   					<hr>
   					<hr class="short">
   				</div>
   				<form>
   					<div class="col-3">
-			        	<input class="effect-2" type="text" placeholder="UserName...">
+			        	<form:input path="username" class="effect-2" type="text" placeholder="UserName..."/>
+			        	 <td><form:errors path="username" cssClass="error"/></td> 
 			            <span class="focus-border"></span>
-			            <input class="effect-2" type="text" placeholder="Email...">
+			            <form:input path="email" class="effect-2" type="text" placeholder="Email..."/>
+			            <td><form:errors path="email" cssClass="error"/></td>
+
 			            <span class="focus-border"></span>
-			            	<input class="effect-2" type="text" placeholder="Password...">
-			            <span class="focus-border"></span>
-			            	<input class="effect-2" type="text" placeholder="ContactNumber...">
+			            	<form:input path="password" class="effect-2" type="text" placeholder="Password..."/>
+			            <td><form:errors path="password" cssClass="error"/></td>
+
 			            <span class="focus-border"></span>
 
-			            <input class="effect-2" type="password" placeholder="Address...">
+			            	<form:input path="contact" class="effect-2" type="text" placeholder="ContactNumber..."/>
+                            <td><form:errors path="contact" cssClass="error"/></td>	
+
+			            <span class="focus-border"></span>
+			            <form:input path="address" class="effect-2" type="password" placeholder="Address..."/>
+			            <td><form:errors path="address" cssClass="error"/></td>	
+
 			            <span class="focus-border"></span>
 			        </div>
 

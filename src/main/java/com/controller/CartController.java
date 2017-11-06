@@ -1,5 +1,7 @@
 package com.controller;
 
+import java.sql.Timestamp;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +48,8 @@ public class CartController
 				System.out.println(item);
 				item.setProductPrice(p.getPrice());
 				item.setSubTotal(item.getProductQuantity() *p.getPrice());
+				item.setCreatedBy("SYSTEM");
+				item.setCreatedTimestamp(new Timestamp(System.currentTimeMillis()));
 				cartDao.saveProductToCart(item);
 				attributes.addFlashAttribute("ExistingMessage",  p.getProductName() +"is already exist");
 		
@@ -58,10 +62,12 @@ public class CartController
 				item.setProductid(p.getProductId());
 				item.setProductName(p.getProductName());
 				item.setUserId(userId);
-				item.setProductPrice(p.getPrice());
+				
 				item.setProductQuantity(q);
 				item.setSubTotal(q * p.getPrice());
-				
+				item.setProductPrice(p.getPrice());
+				item.setCreatedBy("SYSTEM");
+				item.setCreatedTimestamp(new Timestamp(System.currentTimeMillis()));
 				cartDao.saveProductToCart(item);
 				attributes.addFlashAttribute("SuccessMessage", "Item"+p.getProductName()+" has been deleted Successfully");
 				return "redirect:/cart";
